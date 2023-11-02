@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
      現在ログイン中のユーザー（Userモデルのインスタンス）を取得できる。
 */
 
+
 class TodoController extends Controller
 {    
     /**
