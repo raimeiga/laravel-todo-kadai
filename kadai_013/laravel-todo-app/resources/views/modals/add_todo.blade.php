@@ -9,7 +9,10 @@
              <form action="{{ route('goals.todos.store', $goal) }}" method="post">
                  @csrf
                  <div class="modal-body">
+                   <h5 class="modal-title" id="addTodoModalLabel{{ $goal->id }}">Todo</h5>
                      <input type="text" class="form-control" name="content">
+                   <h5 class="modal-title" id="addTodoModalLabel{{ $goal->id }}">詳細</h5>
+                     <input type="text" class="form-control" name="description">
                      <div class="d-flex flex-wrap">
                          @foreach ($tags as $tag)                            
                              <label>  
