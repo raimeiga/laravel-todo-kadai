@@ -33,6 +33,7 @@ class TodoController extends Controller
 
         $todo = new Todo();
         $todo->content = $request->input('content');
+        $todo->description = $request->input('description');
         $todo->user_id = Auth::id();  //←現在ログイン中のユーザーが持つ目標をすべて取得
         $todo->goal_id = $goal->id;
         $todo->done = false;
@@ -62,6 +63,7 @@ class TodoController extends Controller
         ]);
 
         $todo->content = $request->input('content');
+        $todo->description = $request->input('description');
         $todo->user_id = Auth::id();
         $todo->goal_id = $goal->id;
         $todo->done = $request->boolean('done', $todo->done);
