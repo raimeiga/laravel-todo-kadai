@@ -95,7 +95,7 @@
                                              @else
                                                  {{ $todo->content }}
                                              @endif
-                                         </h5>      
+                                     </h5>      
                                          <div class="dropdown">
                                              <a href="#" class="dropdown-toggle px-1 fs-5 fw-bold link-dark text-decoration-none menu-icon" id="dropdownTodoMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">︙</a>
                                              <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="dropdownTodoMenuLink">                                                                                                                                                                                       
@@ -118,7 +118,10 @@
                                                  <li><a href="#" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#deleteTodoModal{{ $todo->id }}">削除</a></li>  
                                              </ul>
                                          </div>
-                                     </div>   
+                                     </div>
+                                     <!--  詳細の表示 　-->
+                                     <h6>{{ $todo->description }}</h6>    
+                                  
                                      <h6 class="card-subtitle ms-1 mb-1 text-muted">{{ $todo->created_at }}</h6>                                                               
                                       <div class="d-flex flex-wrap mx-1 mb-1">
                                          @foreach ($todo->tags()->orderBy('id', 'asc')->get() as $tag)                                    
